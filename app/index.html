@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA 6 Trophy Guide — Leonida Checklist</title>
+<meta name="description" content="An offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: checklist, roadmap to the Platinum, missable flags, and a cited guide for every trophy.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">VI</div>
+      <div>
+        <h1>GTA 6 Trophy Guide</h1>
+        <p class="subtitle">Grand Theft Auto VI · PlayStation 5 · all 55 trophies, offline</p>
+      </div>
+    </div>
+    <div class="progress" id="progress" aria-live="polite">
+      <div class="progress-numbers"><strong id="earned-count">0 / 55</strong><span id="earned-pct">0%</span></div>
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+      <p class="progress-grades" id="grade-counts"></p>
+    </div>
+  </div>
+  <nav class="views" aria-label="Views">
+    <button type="button" class="view-tab is-active" data-view="checklist">Checklist</button>
+    <button type="button" class="view-tab" data-view="roadmap">Roadmap to Platinum</button>
+    <button type="button" class="view-tab" data-view="missables">Missables</button>
+  </nav>
+</header>
+
+<main>
+  <section id="view-checklist" class="view is-active" aria-label="Trophy checklist">
+    <div class="toolbar">
+      <label class="search">
+        <span class="visually-hidden">Search trophies</span>
+        <input type="search" id="search" placeholder="Search name, description or guide…" autocomplete="off">
+      </label>
+      <div class="chips" id="kind-chips" role="group" aria-label="Filter by kind">
+        <button type="button" class="chip is-active" data-kind="all">All <span class="chip-n">55</span></button>
+        <button type="button" class="chip" data-kind="story">Story <span class="chip-n">17</span></button>
+        <button type="button" class="chip" data-kind="missable">Missable <span class="chip-n">1</span></button>
+        <button type="button" class="chip" data-kind="collectibles">Collectibles <span class="chip-n">7</span></button>
+        <button type="button" class="chip" data-kind="activities">Activities <span class="chip-n">10</span></button>
+        <button type="button" class="chip" data-kind="crime">Crime <span class="chip-n">10</span></button>
+        <button type="button" class="chip" data-kind="world">World <span class="chip-n">11</span></button>
+        <button type="button" class="chip" data-kind="online">Online <span class="chip-n">0</span></button>
+      </div>
+      <div class="toolbar-row">
+        <label class="field">Grade
+          <select id="grade-filter">
+            <option value="all">All grades</option>
+            <option value="platinum">Platinum</option>
+            <option value="gold">Gold</option>
+            <option value="silver">Silver</option>
+            <option value="bronze">Bronze</option>
+          </select>
+        </label>
+        <label class="field">Sort
+          <select id="sort">
+            <option value="id">Trophy order</option>
+            <option value="grade">Grade (best first)</option>
+            <option value="stage">Roadmap stage</option>
+            <option value="name">Name A–Z</option>
+          </select>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" id="spoiler" checked>
+          <span>Spoiler-safe: hide the 28 hidden trophies until earned</span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" id="earned-only">
+          <span>Earned only</span>
+        </label>
+      </div>
+      <p class="toolbar-note" id="list-note"></p>
+    </div>
+    <ul class="trophy-list" id="trophy-list"></ul>
+    <p class="empty" id="list-empty" hidden>No trophies match these filters.</p>
+  </section>
+
+  <section id="view-roadmap" class="view" aria-label="Roadmap to the Platinum">
+    <div class="roadmap-intro">
+      <h2>Roadmap to the Platinum</h2>
+      <p>About 200 hours, difficulty 4 out of 10, one playthrough is enough (PowerPyx). Work the stages in order: the story first, then strangers, activities, collectibles, and crime last. The 100% checklist (A Long Road) comes after the credits — its thresholds are lenient, roughly 60% of true completion.</p>
+    </div>
+    <ol class="roadmap" id="roadmap"></ol>
+  </section>
+
+  <section id="view-missables" class="view" aria-label="Missable trophies">
+    <div class="missable-intro">
+      <h2>Missables — only one is flagged</h2>
+      <p>PowerPyx and GTABase both flag <strong>Positive Mental Attitude</strong> as the only trophy that may be missable: the first meditation, Lucia on the balcony at Jason's house in Chapter 1, disappears after that chapter. There is no mission replay, so keep a manual save at the start of every chapter and one before the final mission. One more timed thing to watch: the Race Against Yago in Chapter 3 is time-sensitive (hourglass icon) and counts toward Strangers &amp; Freaks — do it the moment it appears.</p>
+    </div>
+    <ul class="trophy-list" id="missable-list"></ul>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="data-tools">
+      <h2>Your progress</h2>
+      <p>Progress saves in this browser automatically. Export it to a file before clearing browser data, and import it back here.</p>
+      <div class="data-buttons">
+        <button type="button" id="export-btn">Export progress</button>
+        <label class="import-label" for="import-file">Import progress</label>
+        <input type="file" id="import-file" accept="application/json,.json" class="visually-hidden">
+        <button type="button" id="reset-btn" class="danger">Reset progress</button>
+      </div>
+      <p class="data-status" id="data-status" aria-live="polite"></p>
+    </div>
+    <div class="sources">
+      <h2>Sources</h2>
+      <p>Trophy names, descriptions and grades are shown as PlayStation publishes them, as listed by Exophase and cross-checked with PSNProfiles (via <a href="https://www.planetgta6.com/en/gta-6-trophies/">Planet GTA 6 — GTA 6 Trophies</a>). Every guide is written for this page in its own words and names its sources beside it — see each trophy's guide. Key sources: <a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/">PowerPyx — GTA 6 Trophy Guide &amp; Roadmap</a>, <a href="https://outputlag.com/guides/gta-6-trophy-list/">Output Lag — GTA 6 Trophy List</a>, <a href="https://cryptogames.gg/gta-6-trophies-achievements-full-list/">CryptoGames — GTA 6 Trophies and Achievements</a>.</p>
+      <p class="fineprint">Unofficial fan guide. Grand Theft Auto, GTA and Rockstar Games are trademarks of their owners. This page uses no Rockstar logo, artwork or game screenshots, and it makes no network requests: it works fully offline from its own files.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
