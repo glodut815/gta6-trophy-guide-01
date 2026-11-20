@@ -3,107 +3,104 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GTA 6 Trophy Guide — All 55 PS5 Trophies</title>
-<meta name="description" content="An offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: the official list, a saved checklist, filters, a spoiler setting, a roadmap to the platinum and a guide to every trophy.">
+<title>Leonida Trophy Guide — GTA VI · All 55 PS5 Trophies</title>
+<meta name="description" content="Offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: checklist saved in your browser, filters, spoiler mode, platinum roadmap and missable warnings.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="hero">
-  <div class="hero-inner">
-    <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5</p>
-    <h1>GTA 6 Trophy Guide</h1>
-    <p class="tagline">All 55 trophies. One playthrough. No online required.</p>
-    <div class="progress-wrap" aria-label="Trophy progress">
-      <div class="progress-numbers"><span id="earned-count">0</span> / <span id="total-count">55</span> earned</div>
-      <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
-      <div class="progress-grades" id="grade-counts"></div>
+<header class="top">
+  <div class="wrap">
+    <p class="eyebrow">Grand Theft Auto VI · PlayStation 5</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="sub">All 55 trophies — checklist, roadmap and cited guides. Works fully offline; your progress never leaves this browser.</p>
+    <div class="progress" id="progress" aria-live="polite">
+      <div class="bar"><div class="fill" id="progressFill" style="width:0%"></div></div>
+      <p class="counts"><strong id="earnedCount">0 / 55</strong> earned · <span id="gradeCounts"></span></p>
     </div>
   </div>
 </header>
 
-<nav class="tabs" role="tablist" aria-label="Guide sections">
-  <button class="tab active" data-view="checklist" role="tab" aria-selected="true">Checklist</button>
-  <button class="tab" data-view="roadmap" role="tab" aria-selected="false">Roadmap</button>
-  <button class="tab" data-view="missables" role="tab" aria-selected="false">Missables</button>
-</nav>
-
-<main>
-  <section id="view-checklist" class="view active">
-    <div class="controls">
-      <input id="search" type="search" placeholder="Search trophies by name&hellip;" aria-label="Search trophies">
-      <div class="chip-row" id="kind-filters" role="group" aria-label="Filter by kind"></div>
-      <div class="chip-row" id="grade-filters" role="group" aria-label="Filter by grade"></div>
-      <div class="chip-row" id="status-filters" role="group" aria-label="Filter by status"></div>
-    </div>
-    <div class="settings">
-      <label class="toggle">
-        <input type="checkbox" id="spoiler-toggle">
-        <span>Hide story spoilers</span>
-        <small>Story trophies stay hidden until you earn them.</small>
-      </label>
-      <div class="actions">
-        <button id="export-btn" type="button">Export progress</button>
-        <button id="import-btn" type="button">Import progress</button>
-        <input id="import-file" type="file" accept="application/json,.json" hidden>
-        <button id="reset-btn" type="button">Reset</button>
-      </div>
-    </div>
-    <p class="count-line" id="count-line"></p>
-    <div class="grid" id="trophy-grid"></div>
-    <p class="empty" id="empty-note" hidden>No trophies match these filters.</p>
-  </section>
-
-  <section id="view-roadmap" class="view">
-    <h2>Roadmap to the platinum</h2>
-    <p class="lede">One playthrough is enough, all of it offline, and there is no mission replay — so keep a save at the start and the end of every chapter. PowerPyx rates the platinum 4 out of 10 and puts it at about 200 hours.</p>
-    <div class="facts" id="roadmap-facts"></div>
+<main class="wrap">
+  <section class="roadmap" id="roadmap">
+    <h2>Road to the Platinum</h2>
+    <p class="road-meta">Platinum: <strong>“Vice Got a Price!”</strong> · Difficulty 4/10 · About 200 hours · One playthrough, all offline, no online trophies. <span class="src">Roadmap shape: PowerPyx, via GTASpotter.</span></p>
     <ol class="steps">
-      <li>
-        <h3>Step 1 — Story and side missions <span class="step-time">60–80 hours</span></h3>
-        <p>Play through the story and pick up optional missions as they appear: purple icons, plus black icons with pink letters. Along the way, scan every new vehicle with the WAiNK app and study animals through your binoculars. 100% needs 200 of the 277 base vehicle models and 100 of the 255 animals — studying is enough, you do not have to hunt them. Everything you do before the ending already counts toward the checklist.</p>
-        <div class="step-trophies" data-step="story"></div>
-      </li>
-      <li>
-        <h3>Step 2 — The 100% checklist and Challenges <span class="step-time">about 100 hours</span></h3>
-        <p>After the ending, Progress, then Stats, gains a 100% Completion entry. Most side quests are not required, and collectibles only partly. You do need every robbery, underwater discovery, shooting range, drone race and the Bret quest. Only 70 of the 80 Challenges are needed, so you can skip the nastiest ones.</p>
-        <div class="step-trophies" data-step="completion"></div>
-      </li>
-      <li>
-        <h3>Step 3 — Strangers &amp; Freaks and cleanup <span class="step-time">about 10 hours</span></h3>
-        <p>The checklist does not ask for these quests, so they are usually what is left afterwards, together with any stray trophies that did not pop on their own. Finish the eight Strangers &amp; Freaks questlines and sweep up the rest with the checklist filters.</p>
-        <div class="step-trophies" data-step="strangers"></div>
-      </li>
+      <li><strong>Step 1 — Story (60–80 hours).</strong> Play the story and the optional missions. Scan vehicles and study animals as you go. Save manually at the start and end of every chapter — missions cannot be replayed, and cheats disable trophies and saving.</li>
+      <li><strong>Step 2 — The 100% checklist (about 100 hours).</strong> After the story, the checklist under Progress &gt; Stats needs 70 of the 80 challenges, every robbery, every underwater discovery, every shooting range, drone race and Bret quest. Most remaining trophies fall out of it.</li>
+      <li><strong>Step 3 — Cleanup (about 10 hours).</strong> Any Strangers &amp; Freaks left and whatever is missing. Once the story is over, every quest giver tied to a trophy comes back.</li>
     </ol>
-    <p class="note">Cheats disable trophies and saving, so keep them off the save you are using for the platinum. There are no difficulty settings, and no trophy needs online play.</p>
+    <p class="warn"><strong>Watch out:</strong> one trophy may be missable — <button class="linklike" id="warnJump" type="button">Positive Mental Attitude</button> (meditate at Jason’s house in Chapter 1). Also avoid the Irredeemable criminal profile: it is permanent and makes the police more aggressive. Some quests are Lucia-only (Andy) or Jason-only (Tyrone and Bret).</p>
   </section>
 
-  <section id="view-missables" class="view">
-    <h2>Missable trophies</h2>
-    <p class="lede">Only one trophy can be missed. Everything else is still earnable in free roam after the story ends.</p>
-    <div class="grid" id="missable-grid"></div>
-    <h3>Five trophies still unsolved</h3>
-    <p>These hidden trophies have no confirmed unlock method yet. Their guides say so plainly, and this guide will be updated as players pin them down.</p>
-    <div class="grid" id="unsolved-grid"></div>
-    <h3>Watch out</h3>
-    <ul class="warnings">
-      <li><strong>Cheats disable trophies and saving.</strong> They only unlock after the story, which is exactly when you will be mopping up most trophies — keep them off your platinum save.</li>
-      <li><strong>No mission replay.</strong> Keep a separate save at the start and end of every chapter; the game gives you 15 manual slots and one autosave.</li>
-      <li><strong>Some optional missions expire</strong> and a few fences disappear for good, but every character tied to a trophy is still around in free roam after the ending.</li>
-      <li><strong>Do not pick the Irredeemable criminal profile.</strong> It is permanent and makes the police more aggressive.</li>
-    </ul>
+  <section class="controls" aria-label="Filters and progress tools">
+    <div class="row">
+      <label class="search">Search
+        <input id="search" type="search" placeholder="Trophy name or keyword…" autocomplete="off">
+      </label>
+      <label class="select">Kind
+        <select id="kindFilter">
+          <option value="all">All kinds</option>
+          <option value="story">Story</option>
+          <option value="strangers">Strangers</option>
+          <option value="activities">Activities</option>
+          <option value="collections">Collections</option>
+          <option value="crime">Crime</option>
+          <option value="completion">Completion</option>
+        </select>
+      </label>
+      <label class="select">Grade
+        <select id="gradeFilter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="select">Status
+        <select id="statusFilter">
+          <option value="all">All trophies</option>
+          <option value="earned">Earned</option>
+          <option value="remaining">Still to earn</option>
+        </select>
+      </label>
+    </div>
+    <div class="row toggles">
+      <label class="check"><input type="checkbox" id="spoilerToggle"> <span>Hide story trophies (spoiler mode)</span></label>
+      <label class="check"><input type="checkbox" id="missableToggle"> <span>Missables only</span></label>
+      <span class="spacer"></span>
+      <button id="exportBtn" type="button">Export progress</button>
+      <button id="importBtn" type="button">Import progress</button>
+      <input id="importFile" type="file" accept=".json,application/json" hidden>
+      <button id="resetBtn" type="button" class="danger">Reset progress</button>
+    </div>
+    <p class="result-count" id="resultCount" aria-live="polite"></p>
+  </section>
+
+  <section class="grid" id="grid" aria-label="Trophy list"></section>
+
+  <section class="about">
+    <h2>About this guide</h2>
+    <p>Names, descriptions and grades follow the list PlayStation and Xbox show since launch, as collected by PSNProfiles and TrueAchievements and cross-checked across the sources below. Five hidden trophies still have cryptic descriptions; their guides say so honestly instead of inventing a method. Every guide is written in the author’s own words and cites its sources.</p>
+    <ul class="sources" id="sourceList"></ul>
+    <p class="disclaimer">Unofficial fan guide. Not affiliated with Rockstar Games, Sony or PlayStation. No Rockstar logo or official artwork is used.</p>
   </section>
 </main>
 
-<footer>
-  <p>An unofficial fan guide. Grand Theft Auto, GTA and Rockstar Games are trademarks of their owners; this guide is not affiliated with or endorsed by Rockstar Games. Trophy names and descriptions are the game's own, as published in the trophy list; the guides are written for this page.</p>
-  <p>Sources: <span id="source-list"></span></p>
-  <p>Progress is saved only in this browser. Export it to keep a backup.</p>
-</footer>
-
-<dialog id="detail-dialog">
-  <article id="detail-body"></article>
-  <form method="dialog" class="dialog-actions">
-    <button type="submit">Close</button>
+<dialog id="detail" class="detail">
+  <form method="dialog" class="detail-inner">
+    <p class="d-grade" id="dGrade"></p>
+    <h2 id="dName"></h2>
+    <p class="d-desc" id="dDesc"></p>
+    <p class="d-meta" id="dMeta"></p>
+    <h3>How to get it</h3>
+    <p id="dGuide"></p>
+    <h3>Sources</h3>
+    <ul class="d-sources" id="dSources"></ul>
+    <div class="d-actions">
+      <button type="button" id="dToggle">Mark as earned</button>
+      <button type="submit">Close</button>
+    </div>
   </form>
 </dialog>
 

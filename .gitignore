@@ -1,4 +1,4 @@
 node_modules/
-out/
-.DS_Store
+.output/
 *.log
+.DS_Store
